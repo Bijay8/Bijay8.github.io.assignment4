@@ -1,0 +1,62 @@
+<div class="row" ng-init="data.viewDetails()">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                
+                 <ul class="pager">             
+                    <li class="next">
+                        <a ng-href="#/other/{{data.year}}">Team Information  &rarr;</a>
+                    </li>
+                </ul>
+                
+    
+                <div class="post-preview" >
+                        <h2 class="post-title">
+                            {{data.name}}
+                        </h2>
+                        <h4 class="post-subtitle">
+                        <form>
+                           <label>Filter By:</label><br>
+                           <label>Round Name: <input type="text" placeholder="Enter round name" ng-model="round"></label> <br>
+                           <label>Any detail: <input  placeholder="Filter by name,Code Or Date" ng-model="search.$"></label> <br>
+                           <label>Year only:<input placeholder="Filter by Date" ng-model="search.date"></label><br>
+                           <label>Team one :<input placeholder="Filter by Team1 " ng-model="search.team1.name"></label><br>
+                           <label>Team TWo: <input placeholder="Filter by Team2 " ng-model="search.team2.name"></label><br>
+                           <label>Click to see Match Status  or Score:<button ng-class="{'result': false}" ng-click="result=data.Bywinner()">
+                            Clickme</button></label>
+                       </form>
+
+                        </h4>
+                        <p> Click on each match to get more details</p>     
+                    <div class="post-meta"  ng-repeat="round in data.rounds | filter:round"> <h3>{{round.name}}</h3>
+                    <div class="post-meta  well"  ng-repeat="match in round.matches | filter :search" >
+                    <a ng-href="#/single/{{data.year}}/{{match.team1.code+match.team2.code}}">
+                
+                         Date:<span>{{match.date}}</span> <br> 
+                         Match Between:<span>{{match.team1.name}}({{match.team1.code}})</span>  vs  <span>{{match.team2.name}}({{match.team2.code}})</span> <br>
+
+                         <div ng-hide="result">
+                         Score:<span >{{match.score1}}    -    {{match.score2}}</span>
+                         </div>
+                         <div ng-show="result">
+                              Match Status:<span>{{(match.score1 != match.score2) ? ((match.score1 > match.score2)  ?  match.team1.name +" is winner"  : match.team2.name +" is winner") :"Match is tie"}}</span>
+                                     
+                          
+                          </div>    
+
+                          </div>
+                     </div>
+                    
+                </div>
+                
+                
+            <!--Pager--> 
+             <ul class="pager">
+                <li class="next">
+                        <a href="#/">Back To Home&rarr;</a>
+                </li>
+            </ul>
+
+                
+             
+                    </div>
+            </div>

@@ -1,0 +1,25 @@
+<div class="row" >
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <div class="post-preview">
+
+                        
+                        <h3> Click to get details  of  any of  the below  Season</h3>
+                        <form name="myForm">
+ 
+                        <input name="myInput" ng-model="info.year">
+                        
+                        <h3 ng-if="info.year=='2015'  || info.year=='2016'"> <a ng-href="#/{{info.year}}"> click</a></h3>
+                        <h3 ng-if="info.year!='2015'  && info.year!='2016'" ng-show="info.year">Please Enter Season As 2015 or 2016</h3>
+
+                  <!--      <p>
+                          Season:<a ng-href="#/{{2015}}">2015</a><br>
+                          Season:<a ng-href="#/{{2016}}">2016<a>
+                         </p> 
+                        <!--<a ng-click="result=info.check()">Click</a>-->
+                       
+                    
+                 </div>
+             
+                    </div>
+            </div>

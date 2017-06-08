@@ -1,0 +1,42 @@
+<div class="row" ng-init="singlematch.loadSingeBlog()">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+              <!--  <h1>{{singlematch.blog.heading}}</h1>-->
+
+                <div class="post-preview">
+                    <p>      
+                        <h3>Match Detail:</h3>
+                    </p>
+                   <!-- <p class="post-meta">Posted by <a href="#">{{singleBlog.blog.author}}</a> on {{singleBlog.blog.created | date:'medium'}}-->
+
+
+                </div>
+                      <p class=well>
+                      
+
+                         Date:<span>{{singlematch.date}}</span> <br> 
+                         Mtach:<span>{{singlematch.team1}}</span>  vs  <span>{{singlematch.team2}}</span> <br>
+                         Score:<span >{{singlematch.score1}}    -    {{singlematch.score2}}</span><br>
+                         Winner:<span>{{singlematch.status}}</span><br>
+                         <br>
+                         </p>
+                         <h3>Other Match played between this two team in this season</h3>
+                         <p class=well>
+                         {{singlematch.other}} and
+                         {{singlematch.status1}}
+                         
+                          </div>        
+                              </p>
+
+                
+                
+              
+             
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#/{{singlematch.season}}">Back &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+</div>

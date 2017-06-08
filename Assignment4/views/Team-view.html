@@ -1,0 +1,37 @@
+<div class="row" ng-init=other.loadAllBlogs()>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            
+                   <div class="post-preview" >
+                   <h3>Clcik On Team Name to See Team Stats</h3>
+                    <ul>
+                      <li ng-repeat="name in other.team track by $index" 
+                       ng-click="result=other.teamDetails(name)">{{name}}
+                    </li>
+                    </ul>
+                     </div>  
+                              
+                        <div class="post-meta well ">
+                     <h3>Team :<span>{{other.inputname}}</span></h3>
+                     Total Matches played:<SPAN></SPAN> {{other.count}}<br>
+                     Total Matches Won:<SPAN></SPAN>{{other.Won_count}}<br>
+                     Total Matches Tied:<SPAN></SPAN>{{other.Tie_count}}<br>
+                     Total Matches Lost:<SPAN></SPAN>{{other.Lost_Count}}<br>
+                     Total Goal  Scored:<SPAN></SPAN>{{other.Score_count}}<br>  
+                     Total Goal Scored against them:<SPAN></SPAN>{{other.Score_against_count}}
+                        </div>
+            
+
+
+
+            
+                <ul class="pager">              
+                    <li class="next">
+                        <a ng-href="#/{{other.season}}">Back &rarr;</a>
+                    </li>
+                </ul>
+                
+
+    
+                </div>
+            </div>
+        

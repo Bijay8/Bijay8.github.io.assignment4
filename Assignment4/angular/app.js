@@ -177,7 +177,7 @@ else
                        if(main.date1 > main.date)
                            main.other="They played next match on "+ main.date1
                         else
-                           main.other="They played previous match on "+ main.date
+                           main.other="They played previous match on "+ main.date1
                          main.otherscore1=main.rounds[i].matches[j].score1
                          main.otherscore2=main.rounds[i].matches[j].score2
                          if(main.otherscore1==main.otherscore2)
